@@ -1,3 +1,5 @@
+library(reshape2)
+
 ## extract the activity labels
 activity.labels <- read.table('./UCI HAR Dataset//activity_labels.txt') [,2]
 
@@ -37,5 +39,23 @@ names(combined.data) <- gsub("[()+=]", "", x=names(combined.data))
 ## representation
 combined.data$activity <- as.vector(activity.labels[combined.data$activity])
 
+
+##Adding subject column to the dataset
+subject.train <- read.table(file="./UCI HAR Dataset/train/subject_train.txt")
+subject.test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+
+subject.data <- rbind(subject.train, subject.test)
+names(subject.data) <- c("subject")
+
+combined.data <- cbind(combined.data, subject.data)
 ## write the first tidy data set down to tidyDataset1.txt
 write.table(combined.data, "tidyDataset1.txt")
+
+## rownames will be unique descriptors for the data
+combined.melt <- melt(combined.data, id=c("activity","subject"))
+combined.cast <- dcast(combined.melt, activity + subject ~ variable, mean)
+rownames(combined.cast) <- paste(combined.cast$subject,combined.cast$activity, sep=",")
+combined.cast.uniqueID <- rownames(combined.cast)
+names(combined.cast.uniqueID) <- c("uniqueID")
+combined.cast <- cbind(combined.cast.uniqueID, combined.cast)
+
