@@ -2,7 +2,7 @@
 
 ## Source data set
 
-The tidy data is created from the source data set titled *Human Activity Recognition Using Smartphones Data Set*, the details of which are found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+The tidy data is created from the source data set titled *Human Activity Recognition Using Smartphones Data Set* , the details of which are found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
 The corresponding data can be downloaded at: https://d39 qusza40 rc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20 AR%20 ataset.zip
 
@@ -23,43 +23,43 @@ It contains a total of 10 9  observations of 75 variables.
 Following are the column names for each of them:
 
 ### Variable description, format and nomenclature
-*activity
-  *This is the label for the dataset, and stores the descriptive factor of the tasks carried out by the subjects
-  *Following are the different activities, recorded in the dataset in the form of a string, captured by a person:
-      *WALKING
-      *WALKING_UPSTAIRS
-      *WALKING_DOWNSTAIRS
-      *SITTING
-      *STANDING
-      *LAYING 
-*subject
-  *This is indexed from 1-30  each uniquely identifying the thirty different people used as test subjects for the experiment
-*The variable names for measurements follow the following formats:
-  *[measurement_name]-[mean/std]
-  *[measurement_name]-[mean/std]-[axis]
-*axis can take the values X, Y and Z.
-*mean signifies average
-*std signifies standard deviation
+* activity
+  * This is the label for the dataset, and stores the descriptive factor of the tasks carried out by the subjects
+  * Following are the different activities, recorded in the dataset in the form of a string, captured by a person:
+      * WALKING
+      * WALKING_UPSTAIRS
+      * WALKING_DOWNSTAIRS
+      * SITTING
+      * STANDING
+      * LAYING 
+* subject
+  * This is indexed from 1-30  each uniquely identifying the thirty different people used as test subjects for the experiment
+* The variable names for measurements follow the following formats:
+  * [measurement_name]-[mean/std]
+  * [measurement_name]-[mean/std]-[axis]
+* axis can take the values X, Y and Z.
+* mean signifies average
+* std signifies standard deviation
 
-* list of possible measurements:
-  *tBodyAcc-XYZ
-  *tGravityAcc-XYZ
-  *tBodyAccJerk-XYZ
-  *tBodyGyro-XYZ
-  *tBodyGyroJerk-XYZ
-  *tBodyAccMag
-  *tGravityAccMag
-  *tBodyAccJerkMag
-  *tBodyGyroMag
-  *tBodyGyroJerkMag
-  *fBodyAcc-XYZ
-  *fBodyAccJerk-XYZ
-  *fBodyGyro-XYZ
-  *fBodyAccMag
-  *fBodyAccJerkMag
-  *fBodyGyroMag
-  *fBodyGyroJerkMag
-*Please note that XYZ represents separate measurements on three different axis
+*  list of possible measurements:
+  * tBodyAcc-XYZ
+  * tGravityAcc-XYZ
+  * tBodyAccJerk-XYZ
+  * tBodyGyro-XYZ
+  * tBodyGyroJerk-XYZ
+  * tBodyAccMag
+  * tGravityAccMag
+  * tBodyAccJerkMag
+  * tBodyGyroMag
+  * tBodyGyroJerkMag
+  * fBodyAcc-XYZ
+  * fBodyAccJerk-XYZ
+  * fBodyGyro-XYZ
+  * fBodyAccMag
+  * fBodyAccJerkMag
+  * fBodyGyroMag
+  * fBodyGyroJerkMag
+* Please note that XYZ represents separate measurements on three different axis
 
 
 
@@ -145,9 +145,7 @@ Following are the column names for each of them:
 This contains the average of each of the measurement variables described in tidy dataset 1, for every combination of subject and activity. It contains a total of 18  observations of 76 variables. Effectively, there are 18  combinations of subject and activity.
 
 ###Variables
-All the columns numbered 1 through 75 are there in this dataset. In addition, there is a variable called uniqueID, which is basically a string of the form
-'''
-[activity],[subject]
-'''
+All the columns numbered 1 through 75 are there in this dataset. In addition, there is a variable called uniqueID, which is basically a string of the form [activity],[subject]
+
 
 All the row names are also having the values corresponding to the uniqueID
