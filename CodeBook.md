@@ -145,7 +145,7 @@ Following are the column names for each of them:
 This contains the average of each of the measurement variables described in tidy dataset 1, for every combination of subject and activity. It contains a total of 18  observations of 76 variables. Effectively, there are 18  combinations of subject and activity.
 
 ###Variables
-All the columns numbered 1 through 75 are there in this dataset. In addition, there is a variable called uniqueID, which is basically a string of the form [activity],[subject]
+All the columns numbered 1 through 75 are there in this dataset. In addition, there is a variable called **uniqueID**, which is basically a string of the form **[activity],[subject]**
 
 
 All the row names are also having the values corresponding to the uniqueID
