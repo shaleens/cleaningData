@@ -18,7 +18,9 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 
 
-The first tidy data set contains only the standard deviation and mean (mean frequencies are not included) for each measurement. Following are the column names for each of them:
+The first tidy data set contains only the standard deviation and mean (mean frequencies are not included) for each measurement. 
+It contains a total of 10299 observations of 75 variables.
+Following are the column names for each of them:
 
 ### Variable description, format and nomenclature
 *####activity
@@ -139,5 +141,13 @@ The first tidy data set contains only the standard deviation and mean (mean freq
 75	subject
 
 
-## Tidy dataset 2
+##Tidy dataset 2
+This contains the average of each of the measurement variables described in tidy dataset 1, for every combination of subject and activity. It contains a total of 180 observations of 76 variables. Effectively, there are 180 combinations of subject and activity.
 
+###Variables
+All the columns numbered 1 through 75 are there in this dataset. In addition, there is a variable called uniqueID, which is basically a string of the form
+'''
+[activity],[subject]
+'''
+
+All the row names are also having the values corresponding to the uniqueID
