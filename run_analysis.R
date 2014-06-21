@@ -58,4 +58,4 @@ rownames(combined.cast) <- paste(combined.cast$subject,combined.cast$activity, s
 combined.cast.uniqueID <- rownames(combined.cast)
 names(combined.cast.uniqueID) <- c("uniqueID")
 combined.cast <- cbind(combined.cast.uniqueID, combined.cast)
-
+write.table(combined.cast, "tidyDataset2.txt")
