@@ -23,7 +23,7 @@ It contains a total of 10299 observations of 75 variables.
 Following are the column names for each of them:
 
 ### Variable description, format and nomenclature
-*####activity
+*activity
 **This is the label for the dataset, and stores the descriptive factor of the tasks carried out by the subjects
 **Following are the different activities, recorded in the dataset in the form of a string, captured by a person:
 ***WALKING
@@ -32,16 +32,16 @@ Following are the column names for each of them:
 ***SITTING
 ***STANDING
 ***LAYING 
-*####subject
-**This is indexed from 1-30, each uniquely identifying the thirty different people used as test subjects for the experiment
-*####The variable names for measurements follow the following formats:
+* subject
+** This is indexed from 1-30, each uniquely identifying the thirty different people used as test subjects for the experiment
+* The variable names for measurements follow the following formats:
 **[measurement_name]-[mean/std]
 **[measurement_name]-[mean/std]-[axis]
 *axis can take the values X, Y and Z.
 *mean signifies average
 *std signifies standard deviation
 
-*####list of possible measurements:
+* list of possible measurements:
 **tBodyAcc-XYZ
 **tGravityAcc-XYZ
 **tBodyAccJerk-XYZ
