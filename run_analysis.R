@@ -16,10 +16,11 @@ combined.data <- rbind(train.data, test.data)
 names(combined.data) <- cnames.data[,2]
 
 ## Keep only the mean and the standard definition columns in the dataset
-## This also retains meanFreq, I believe, should be a part of the data set
+## This removes meanFreq too, as I believe that is the wording of the problem statement
 isMean <- sapply(names(combined.data), grepl,pattern='mean', ignore.case=T, USE.NAMES=F)
 isStd <- sapply(names(combined.data), grepl,pattern='std', ignore.case=T, USE.NAMES=F)
-colsToKeep <- isMean | isStd
+isMeanFreq <- sapply(names(combined.data), grepl, pattern='meanFreq', ignore.case=T, USE.NAMES=F)
+colsToKeep <- (isMean | isStd) & !isMeanFreq
 combined.data <- combined.data[colsToKeep]
 
 
