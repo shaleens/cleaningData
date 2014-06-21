@@ -24,12 +24,18 @@ combined.data <- combined.data[colsToKeep]
 ##add labels
 train.label <- read.table("./UCI HAR Dataset/train/y_train.txt")
 test.label <- read.table("./UCI HAR Dataset/test/y_test.txt")
-combined.label <- rbind(train.data, train.label)
+combined.label <- rbind(train.label, test.label)
 names(combined.label) <- c("activity")
 
 combined.data <- cbind(combined.data, combined.label)
 
 
 ## clean up the descriptors
-names(new.combined.data) <- gsub("[()+=]", "", x=names(new.combined.data))
+names(combined.data) <- gsub("[()+=]", "", x=names(combined.data))
 
+## replacing the integer representation of activity with the string factor
+## representation
+combined.data$activity <- as.vector(activity.labels[combined.data$activity])
+
+## write the first tidy data set down to tidyDataset1.txt
+write.table(combined.data, "tidyDataset1.txt")
